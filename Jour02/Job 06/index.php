@@ -6,18 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div></div>
     <?php 
 
-$largeur = 20;
+$largeur = 40;
 $hauteur = 100;
 
 while($largeur <= 500 ){?>
 
 <div style="height : <?php echo $hauteur?>; width : <?php echo $largeur?>; border : 1px solid black; margin-bottom: 1rem;"></div>
 <?php
- $largeur *=2;
-
+$largeur++;
 }
    
 ?>
