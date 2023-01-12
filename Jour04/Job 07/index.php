@@ -1,41 +1,74 @@
-<style>
-    body {
-        text-align: center;
-    }
-</style>
+<html>
+<body>
+<form action="" method="get" class="formulaire">
+      <label for="largeur">Largeur : </label>
+      <input type="text" name="largeur" id="largeur">
 
-<form method="get" action="#">
-    <label>Hauteur souhaiter :
-        <input type="text" name="hauteur">
-    </label>
-    <input type="submit" name="sub">
+      <label for="hauteur">Hauteur : </label>
+      <input type="text" name="hauteur" id="hauteur">
+
+      <input type="submit" value="Envoyer">
 </form>
+</body>
+</html>
 
+<pre>
 <?php
-foreach ($_GET as $key => $value) {
-    //Boucle total de ligne (Horizontal)
-    for ($i = 0; $i < $_GET['hauteur']; $i++) {
-        //Boucle des espaces, on retire 1 espace a
-        //chaque fois qu'on dessens d'une ligne
-        // exemple
-        // 1er ligne : $k = ($hauteur - $i) = 5 = (5 - 0)
-        // 2eme ligne: $k = ($hauteur - $i) = 4 = (5 - 1)
-        // 3eme ligne: $k = ($hauteur - $i) = 3 = (5 - 2)
-        // Insi de suite jusqu'a 0
-        for ($k = ($_GET['hauteur'] - $i); $k > 0; $k--) {
-            echo " ";
-        }
-        //Bloucle d'etoiles on ajoute a fur et a mesure
-        // 1er ligne : $z <= $i = 0 <= 0 (Donc on en met une )
-        // 2eme ligne: $z <= $i = 0 <= 1 (Donc on en met deux )
-        // et insi de suite a chaque fois $z doit etre pareil que $i
-        for ($z = 0; $z <= $i; $z++) {
-            echo "@";
-        }
 
-        echo "<br>";
-    }
+if (isset($_GET['largeur']) && isset($_GET['hauteur']))
+{
+// For the triangle
+      $x = 1;
+      $h = $_GET['hauteur'];
 
-    break;
+      while ($x <= $_GET['hauteur'])
+      {
+            // To print whitespaces at the begining of each line
+            for($i=0 ; $i <= $_GET['hauteur']-$x ; $i++)
+            {
+                  echo "&nbsp;";
+            }
+            echo "/";
+
+            for ($j=0 ; $j < $_GET['hauteur']-$h ; $j++)
+            {
+                  echo "_";
+            }
+            if ($_GET['hauteur']-$x == 0)
+            {
+                  echo "\\"; // print "\" at the end of last line (no <br/>)
+            }
+            else
+            {
+                  echo "\\<br/>";
+            }
+            $x++;
+            $h -= 2;
+      }
+
+
+
+
+// For the square
+      echo "<br/>";
+
+
+      for ($i=1 ; $i<$_GET['hauteur'] ; $i++)
+      {
+            echo "|";
+            for ($j=0; $j<$_GET['largeur'] ; $j++)
+            {
+                  echo "&nbsp;";
+            }
+            echo "|<br/>";
+
+      }
+      echo "|";
+      for ($i=0 ; $i<$_GET['largeur'] ; $i++)
+      {
+            echo "_";
+      }
+      echo "|<br/>";
 }
 ?>
+</pre>
