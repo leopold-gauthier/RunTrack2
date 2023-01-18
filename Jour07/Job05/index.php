@@ -1,5 +1,4 @@
 <?php
-
 // PREMIERE TECHNIQUE
 
 function occurence($str, $char)
@@ -22,6 +21,4 @@ function occurence2($str, $char)
         }
     return $count;
 }
-$x = "Bonjour";
-$a = "o";
-echo occurence2($x, $a);
+echo occurence2("Bonjour", "o");
