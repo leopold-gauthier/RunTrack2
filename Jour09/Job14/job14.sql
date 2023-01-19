@@ -1,0 +1,1 @@
+SELECT `prenom`,`nom`,`naissance` FROM etudiants WHERE naissance >= '1998-00-00' AND naissance <= '2018-00-00'; 

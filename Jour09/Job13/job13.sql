@@ -1,0 +1,1 @@
+SELECT AVG(capacite) as 'Moyenne des Salles' FROM salles; 

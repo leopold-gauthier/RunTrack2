@@ -1,0 +1,1 @@
+SELECT MAX(`salles`.`capacite`) as "Capacité",`salles`.`nom` as "Biggest Room", `etage`.`nom`  FROM `salles` INNER JOIN `etage` ON `salles`.`id_etage` = `etage`.`id`;
