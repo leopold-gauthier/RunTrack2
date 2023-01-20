@@ -22,6 +22,7 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Etudiants qui ont moins de 18 ans</h1>
     <table>
         <thead>
             <tr>

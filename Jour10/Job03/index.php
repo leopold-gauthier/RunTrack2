@@ -22,6 +22,7 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Etudiants de sexe féminin</h1>
     <table>
         <thead>
             <tr>

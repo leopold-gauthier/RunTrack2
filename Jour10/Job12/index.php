@@ -22,6 +22,7 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Etudiant née entre 1998 et 2018</h1>
     <table>
         <thead>
             <tr>
@@ -31,7 +32,6 @@
             </tr>
         </thead>
         <tbody>
-            <h1>Etudiant née entre 1998 et 2018</h1>
             <?php
             foreach ($etudiants as $etudiant) {
             ?>

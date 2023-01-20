@@ -22,6 +22,7 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Table étudiant</h1>
     <table>
         <thead>
             <tr>

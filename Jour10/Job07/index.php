@@ -22,6 +22,7 @@
     $etagesStatement->execute();
     $etages = $etagesStatement->fetchAll();
     ?>
+    <h1>Superficie totale des étages</h1>
     <table>
         <thead>
             <tr>

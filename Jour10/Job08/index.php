@@ -22,10 +22,11 @@
     $capacitesStatement->execute();
     $capacites = $capacitesStatement->fetchAll();
     ?>
+    <h1>Capacité Total des Salles</h1>
     <table>
         <thead>
             <tr>
-                <th>Superficie Total</th>
+                <th>Capacité Total</th>
             </tr>
         </thead>
         <tbody>

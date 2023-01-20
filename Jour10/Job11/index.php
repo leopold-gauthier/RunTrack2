@@ -22,6 +22,7 @@
     $capacitesStatement->execute();
     $capacites = $capacitesStatement->fetchAll();
     ?>
+    <h1>Capacité moyenne des salles</h1>
     <table>
         <thead>
             <tr>

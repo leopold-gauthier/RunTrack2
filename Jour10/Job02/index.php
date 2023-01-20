@@ -22,6 +22,7 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Nom et capacité des salles</h1>
     <table>
         <thead>
             <tr>

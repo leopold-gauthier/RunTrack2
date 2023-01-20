@@ -22,6 +22,7 @@
     $capacitesStatement->execute();
     $capacites = $capacitesStatement->fetchAll();
     ?>
+    <h1>Ensemble des informations des salles par ordre décroissant</h1>
     <table>
         <thead>
             <tr>

@@ -22,6 +22,8 @@
     $etudiantsStatement->execute();
     $etudiants = $etudiantsStatement->fetchAll();
     ?>
+    <h1>Etudiants dont le prenom commence par
+        un “T”</h1>
     <table>
         <thead>
             <tr>
